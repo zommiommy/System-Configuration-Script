@@ -99,3 +99,9 @@ pacman --noconfirm -S xorg-server xorg-xinit
 pacman --noconfirm -S budgie-desktop-git
 # Set it as the defualt display manager
 printf "export XDG_CURRENT_DESKTOP=Budgie:GNOME\nexec budgie-desktop" >> /home/$USER/.xinitrc
+
+##########################################################
+# Display manager Installation
+##########################################################
+pacman --noconfirm -S lightdm lightdm-gtk-greeter
+systemctl enable lightdm.service
