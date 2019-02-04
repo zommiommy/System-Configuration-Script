@@ -84,11 +84,18 @@ pause
 rmmod pcspkr
 echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
 ##########################################################
+# Install stuff
+##########################################################
+# Install fonts
+pacman --noconfirm -S noto-fonts
+pacman --noconfirm -S nerd-fonts-complete
+pacman --noconfirm -S fish
+##########################################################
 # Budgie Installation
 ##########################################################
 # Install xorg
-pacman --noconfirm -Syu xorg-server xorg-xinit
+pacman --noconfirm -S xorg-server xorg-xinit
 # Install Budgie
-pacman --noconfirm -Syu budgie-desktop-git
+pacman --noconfirm -S budgie-desktop-git
 # Set it as the defualt display manager
 printf "export XDG_CURRENT_DESKTOP=Budgie:GNOME\nexec budgie-desktop" >> /home/$USER/.xinitrc
