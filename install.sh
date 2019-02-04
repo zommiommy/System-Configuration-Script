@@ -138,7 +138,7 @@ pause
 genfstab -U /mnt >> /mnt/etc/fstab
 
 # Download the script to be executed during the chroot
-wget URL -o /tmp/chroot-install.sh
+wget https://raw.githubusercontent.com/zommiommy/System-Configuration-Script/master/chroot-install.sh -o /tmp/chroot-install.sh
 
 # Change the root to the disk
 arch-chroot /mnt bash /tmp/chroot-install.sh
