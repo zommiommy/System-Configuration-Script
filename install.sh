@@ -144,3 +144,5 @@ wget https://raw.githubusercontent.com/zommiommy/System-Configuration-Script/mas
 arch-chroot /mnt bash /tmp/chroot-install.sh
 
 rm /tmp/chroot-install.sh
+
+pause
