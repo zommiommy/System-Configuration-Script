@@ -17,7 +17,7 @@ PASSWD="testerino"
 ROOT_PASSWD=PASSWD
 
 ##########################################################
-
+pacman -S networkmanager nm-applet
 # Add the networkmanager start on startup
 systemctl enable NetworkManager
 
@@ -89,7 +89,29 @@ echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
 # Install fonts
 pacman --noconfirm -S noto-fonts
 pacman --noconfirm -S nerd-fonts-complete
+pacman --noconfirm -S ranger
+##########################################################
+# Install Byobu
+##########################################################
+git clone https://aur.archlinux.org/byobu.git
+cd byobu
+makepkg -s --noconfirm
+pacman -Sy --noconfirm tmux
+pacman -U --noconfirmo ./*.pkg.tar.xz
+##########################################################
+# Fish Installation
+##########################################################
 pacman --noconfirm -S fish
+# Set as default    
+chsh -s /usr/local/bin/fish
+# Install oh my fish
+curl -L https://get.oh-my.fish | fish
+# Install lambda theme
+omf install lambda
+##########################################################
+# Tilix Terminal Installation
+##########################################################
+pacman -S tilix
 ##########################################################
 # Budgie Installation
 ##########################################################

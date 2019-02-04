@@ -131,7 +131,7 @@ pause
 # System Installation
 ##########################################################
 # Install the base system and the base development tools
-pacstrap /mnt base base-devel tmux vim nano networkmanager
+pacstrap /mnt base base-devel tmux vim nano
 
 pause
 # Generate the Fstab file
